@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toku/components/item_builder.dart';
 
-import '../../models/number.dart';
+import '../../constance/constance.dart';
 
 class Numbers extends StatelessWidget {
-  final Number one = const Number(
-      image: 'assets/images/numbers/number_one.png',
-      jpName: 'Ichi',
-      enName: 'One');
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,15 +11,10 @@ class Numbers extends StatelessWidget {
           title: const Text("Number Page"),
         ),
         body: Builder(builder: (context) {
-          return Column(
-            children: [
-              ItemBuilder(number: one),
-              ItemBuilder(number: one),
-              ItemBuilder(number: one),
-              ItemBuilder(number: one),
-              ItemBuilder(number: one),
-              ItemBuilder(number: one),
-            ],
+          return ListView.builder(
+            itemCount: numbers.length,
+            itemBuilder: (context, index) =>
+                ItemBuilder(number: numbers[index]),
           );
         }));
   }
