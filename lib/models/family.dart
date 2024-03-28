@@ -1,7 +1,7 @@
 import 'package:toku/models/item.dart';
 
-class Number extends ItemModel {
-  Number(
+class Family extends ItemModel {
+  Family(
       {required super.image,
       required super.sound,
       required super.jpName,
