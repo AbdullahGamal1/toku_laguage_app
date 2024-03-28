@@ -6,7 +6,7 @@ import '../models/number.dart';
 class ItemBuilder extends StatelessWidget {
   ItemBuilder({super.key, required this.item, this.onPressed, this.color});
 
-  final Item item;
+  final ItemModel item;
   Color? color;
   Function()? onPressed;
   final player = AudioPlayer();
