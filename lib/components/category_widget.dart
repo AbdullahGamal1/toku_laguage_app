@@ -4,16 +4,16 @@ class CategoryWidget extends StatelessWidget {
   String? categoryName;
   Color? color;
   Function()? onTap;
-  CategoryWidget({super.key, required this.categoryName, required this.color, this.onTap});
+  CategoryWidget(
+      {super.key, required this.categoryName, required this.color, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: InkWell(
-        onTap:  onTap,
+        onTap: onTap,
         child: Container(
-          
           alignment: Alignment.center,
           height: 48,
           width: double.infinity,
