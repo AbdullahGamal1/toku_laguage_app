@@ -1,6 +1,7 @@
-class Number {
-  final String image, jpName, enName;
+import 'package:toku/models/item.dart';
 
-  const Number(
-      {required this.image, required this.jpName, required this.enName});
+class Number extends Item{
+  Number({required super.image, required super.sound, required super.jpName, required super.enName});
 }
+
+
