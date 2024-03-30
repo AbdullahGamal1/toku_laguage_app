@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:toku/models/item.dart';
-import '../models/number.dart';
+import 'package:toku/models/item_model.dart';
+import '../models/number_model.dart';
 
 class ItemBuilder extends StatelessWidget {
   ItemBuilder({super.key, required this.item, this.onPressed, this.color});
@@ -25,10 +25,11 @@ class ItemBuilder extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  item.jpName,
+                  item.itemInfoModel.jpName,
                   style: const TextStyle(fontSize: 18),
                 ),
-                Text(item.enName, style: const TextStyle(fontSize: 18))
+                Text(item.itemInfoModel.enName,
+                    style: const TextStyle(fontSize: 18))
               ],
             ),
           ),
@@ -42,7 +43,7 @@ class ItemBuilder extends StatelessWidget {
                 size: 30,
               ),
               onPressed: () {
-                player.play(AssetSource(item.sound));
+                player.play(AssetSource(item.itemInfoModel.sound));
               },
             ),
           )

@@ -3,8 +3,8 @@ import 'package:toku/components/item_builder.dart';
 
 import '../../constance/constance.dart';
 
-class Numbers extends StatelessWidget {
-  const Numbers({super.key});
+class NumbersScreen extends StatelessWidget {
+  const NumbersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
