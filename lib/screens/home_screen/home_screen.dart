@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toku/components/category_widget.dart';
-import 'package:toku/screens/family_members/family_members.dart';
-import 'package:toku/screens/nembers/nembers.dart';
+import 'package:toku/screens/colors/colors_screen.dart';
+import 'package:toku/screens/family_members/family_members_screen.dart';
+import 'package:toku/screens/nembers/nembers_screen.dart';
+import 'package:toku/screens/phrases/phrases_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,7 +23,7 @@ class HomePage extends StatelessWidget {
             onTap: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return const Numbers();
+                  return const NumbersScreen();
                 },
               ));
             },
@@ -29,10 +31,10 @@ class HomePage extends StatelessWidget {
           CategoryWidget(
             categoryName: 'Family Members',
             color: Colors.green,
-            onTap:  () {
+            onTap: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
-                  return const FamilyMembers();
+                  return const FamilyMembersScreen();
                 },
               ));
             },
@@ -40,12 +42,24 @@ class HomePage extends StatelessWidget {
           CategoryWidget(
             categoryName: 'Colors',
             color: Colors.cyanAccent,
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return const ColorsScreen();
+                },
+              ));
+            },
           ),
           CategoryWidget(
             categoryName: 'Phrases',
             color: Colors.yellowAccent,
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return const PhrasesScreen();
+                },
+              ));
+            },
           ),
         ],
       ),
